@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+  header {
+    padding: 130px 0 100px;
+  }
+
+  section {
+    padding: 150px 0;
+  }
+</style>
+<!-- Encabezado -->
+<div class="container-fluid bg-dark"> 
+    <header class="bg-dark text-white py-5 mb-5">
+      <div class="container h-100 pt-5">
+        <div class="row h-100 align-items-center">
+          <div class="col-lg-12 justify-content-center">
+            <h1 class="display-4 text-white mt-5 mb-2">Bienvenidos a nuestra Biblioteca Virtual!</h1>
+            <div class="row justify-content-center py-5">
+              <button class="btn btn-primary mr-5" href="#contacto" >Contactanos</button>
+              <button class="btn btn-outline-primary mr-2">Ir a Biblioteca</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+</div>
+<!-- Contenido -->
+<div class="row">
+  <div class="col-md-9">
+    <section id="nosotros">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Acerca de este proyecto</h2>
+            <p class="lead">Este proyecto intenta recaudar muchos documentos e información acerca de educación para distintos niveles</p>
+            <ul>
+              <li>Clickable nav links that smooth scroll to page sections</li>
+              <li>Responsive behavior when clicking nav links perfect for a one page website</li>
+              <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
+              <li>Minimal custom CSS so you are free to explore your own unique design options</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  <!-- /.row -->
+
+  <section id="contacto">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Contactanos</h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </div>
+  <div class="col-md-3">
+      <section>
+        <h2>Noticias de Interés</h2>
+        <hr>
+        <address>
+          <strong>Start Bootstrap</strong>
+          <br>3481 Melrose Place
+          <br>Beverly Hills, CA 90210
+          <br>
+        </address>
+        <address>
+          <abbr title="Phone">P:</abbr>
+          (123) 456-7890
+          <br>
+          <abbr title="Email">E:</abbr>
+          <a href="mailto:#">name@example.com</a>
+        </address>
+      </section>
+    </div>
+</div>
+{% endblock %}
