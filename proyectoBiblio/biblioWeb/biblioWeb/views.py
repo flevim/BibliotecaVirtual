@@ -5,14 +5,19 @@ def index(request):
     return render(request, 'index.html', {})
 
 def library(request):
-    def getLevels():
-        return [level[1] for level in courses]
+    def getLevelsAndCount():
+        return [(level[1], Document.objects.filter(level__exact = level[0]).count()) for level in courses]
 
-
-    levels = getLevels()
+    name_count_docs = getLevelsAndCount()
 
     context = {
-        'levels':levels,
+        'name_count_docs':name_count_docs,
     }
 
     return render(request, 'library.html', context)
+
+def detail_course(request, level):
+    context = {
+        'level':level,
+    }
+    return render(request, 'detail_course.html', context)

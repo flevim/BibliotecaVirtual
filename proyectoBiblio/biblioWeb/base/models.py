@@ -62,8 +62,8 @@ class Document(BaseModel):
     title = models.CharField('Titulo', max_length = 200)
     file = models.FileField(upload_to = 'documents/', max_length = 255)
     author = models.ForeignKey(Author, on_delete = models.CASCADE)
-    level = models.CharField(choices = courses, max_length = 12)
-    description = models.TextField('Descripción')
+    level = models.CharField(choices = courses, max_length = 13)
+    description = models.TextField('Descripción', null = True, blank = True)
     publication_date = models.DateField('Fecha de publicación')
     is_public = models.BooleanField('Publicado / No Publicado', default = False)
 
