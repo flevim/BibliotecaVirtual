@@ -10,22 +10,40 @@
   section {
     padding: 150px 0;
   }
+
+  .masthead {
+      position: relative;
+      width: 100%;
+      height: auto;
+      min-height: 35rem;
+      padding: 6.5rem 0;
+      background: linear-gradient(to bottom, rgba(22, 22, 22, 0.9) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("https://previews.123rf.com/images/halfpoint/halfpoint1506/halfpoint150600138/40811000-padres-composici%C3%B3n-d%C3%ADas-escritorio-de-oficina-estudio-tirado-en-el-fondo-de-madera-.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-size: cover;
+  }
+
 </style>
+
 <!-- Encabezado -->
-<div class="container-fluid bg-dark"> 
-    <header class="bg-dark text-white py-5 mb-5">
+<div class="container-fluid masthead">
+    <header class="text-white py-5 mb-5">
       <div class="container h-100 pt-5">
         <div class="row h-100 align-items-center">
           <div class="col-lg-12 justify-content-center">
-            <h1 class="display-4 text-white mt-5 mb-2">Bienvenidos a nuestra Biblioteca Virtual!</h1>
-            <div class="row justify-content-center py-5">
-              <button class="btn btn-primary mr-5" href="#contacto" >Contactanos</button>
-              <button class="btn btn-outline-primary mr-2">Ir a Biblioteca</button>
-            </div>
+
+                  <h1 class="display-4 text-white mt-5 mb-2 ml-4">Bienvenidos a nuestra Biblioteca Virtual</h1>
+                  <div class="row justify-content-center py-5">
+                    <a class="btn btn-outline-danger mr-5" href="#contacto" >Contactanos</a>
+                    <a class="btn btn-danger mr-2" href="biblioteca/">Ir a Biblioteca</a>
+                  </div>
+
           </div>
         </div>
       </div>
     </header>
+</div>
 </div>
 <!-- Contenido -->
 <div class="row">
@@ -63,22 +81,39 @@
 
   </div>
   <div class="col-md-3">
-      <section>
+      <section class="align-items-center">
         <h2>Noticias de Interés</h2>
         <hr>
-        <address>
-          <strong>Start Bootstrap</strong>
-          <br>3481 Melrose Place
-          <br>Beverly Hills, CA 90210
-          <br>
-        </address>
-        <address>
-          <abbr title="Phone">P:</abbr>
-          (123) 456-7890
-          <br>
-          <abbr title="Email">E:</abbr>
-          <a href="mailto:#">name@example.com</a>
-        </address>
+        <br>
+        <div class="card" style="width: 10rem;">
+            <img src="" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#">Go somewhere</a>
+            </div>
+        </div>
+        <br>
+        <div class="card" style="width: 10rem;">
+            <img src="" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#">Go somewhere</a>
+            </div>
+        </div>
+        <br>
+        <div class="card" style="width: 10rem;">
+            <img src="" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#">Go somewhere</a>
+            </div>
+        </div>
+
+
+
       </section>
     </div>
 </div>

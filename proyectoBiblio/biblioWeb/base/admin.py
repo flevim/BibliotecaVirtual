@@ -2,11 +2,11 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
-from import_export import resources
-from import_export.admin import ImportExportModelAdmin
+#from import_export import resources
+#from import_export.admin import ImportExportModelAdmin
 from .models import *
 
-
+"""
 class CategoryResource(resources.ModelResource):
     class Meta:
         model = Category
@@ -56,9 +56,9 @@ class ContactAdmin(ImportExportModelAdmin,admin.ModelAdmin):
     search_fields = ['first_name','last_name','email']
     resource_class = ContactResource
 
-
-admin.site.register(Category, CategoryAdmin)
-admin.site.register(Author, AuthorAdmin)
-admin.site.register(Document, DocumentAdmin)
-admin.site.register(News, NewsAdmin)
-admin.site.register(Contact, ContactAdmin)
+"""
+admin.site.register(Category)
+admin.site.register(Author)
+admin.site.register(Document)
+admin.site.register(News)
+admin.site.register(Contact)

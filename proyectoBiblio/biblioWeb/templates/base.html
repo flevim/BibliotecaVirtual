@@ -3,13 +3,15 @@
   {% include 'head.html' %}
   {% load bootstrap4 %}
   {% bootstrap_css %}
+
   <body>
+
       {% include 'header.html' %}
       {% block content %}
 
       {% endblock %}
       {% include 'footer.html' %}
-      
+
       {% bootstrap_javascript jquery='full' %}
   </body>
 </html>
