@@ -65,14 +65,15 @@ class Document(BaseModel):
     level = models.CharField(choices = courses, max_length = 13)
     description = models.TextField('Descripción', null = True, blank = True)
     publication_date = models.DateField('Fecha de publicación')
-    is_public = models.BooleanField('Publicado / No Publicado', default = False)
+    is_public = models.BooleanField('Publicado', default = False)
+    is_guide_document = models.BooleanField('Documento de Pauta', default = False)
 
     class Meta:
         verbose_name = 'Documento'
         verbose_name_plural = 'Documentos'
 
     def __str__(self):
-        return self.title
+        return str(self.file).strip('documents/')
 
 
 class News(BaseModel):

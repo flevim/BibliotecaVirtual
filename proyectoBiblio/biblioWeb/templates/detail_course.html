@@ -2,12 +2,60 @@
 
 {% block content %}
 
-<div class="py-5 justify-content-center text-center">
-    <br>
-    <br>
-    <br>
-    
+    <div class="row py-5 mt-5">
+        <div class="col-md-2">
+          <ul class="list-group ml-4">
+              {% for level in levels %}
+                  {% if level_actual == level %}
+                      <a href="#" class="list-group-item list-group-item-action active">
+                            {{ level }}
+                      </a>
 
-    <h1>{{ level }}</h1>
-</div>
+                  {% else %}
+                      <a href="#" class="list-group-item list-group-item-action">
+                            {{ level }}
+                      </a>
+                  {% endif %}
+
+              {% endfor %}
+
+
+          </ul>
+        </div>
+        <div class="col-md-10">
+          <p class="d-flex justify-content-around">
+              <a class="btn btn-outline-success" data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
+                  Documentos de pauta
+              </a>
+              <button class="btn btn-outline-info mr-4" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                  Documentos educativos
+              </button>
+          </p>
+          <div class="row">
+              <div class="col">
+                <div class="collapse multi-collapse" id="collapseExample1">
+                  <div class="card card-body">
+                      {% if not docs %}
+                           <p class="font-italic">No se encuentran archivos temporalmente.</p>
+                      {% endif %}
+                      
+                      {% for doc in docs %}
+                          <a href="#"> {{ doc }} </a>
+                      {% endfor %}
+
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="collapse multi-collapse" id="collapseExample2">
+                  <div class="card card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                  </div>
+                </div>
+              </div>
+         </div>
+        </div>
+
+    </div>
+
 {% endblock %}

@@ -7,8 +7,8 @@ from django.views.static import serve
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name = 'index'),
-    path('biblioteca/', library, name = 'biblioteca'),
     path('biblioteca/<level>/', detail_course, name = 'detalles_curso'),
+    path('biblioteca/', library, name = 'biblioteca'),
 ]
 
 if settings.DEBUG:
