@@ -6,7 +6,7 @@
 
               <div class="list-group list-group-flush">
                     {% for level, count in name_count_docs %}
-                          <a href="/biblioteca/{{ level }}" class="list-group-item d-flex justify-content-between align-items-center">
+                          <a href="/{{ level }}/" class="list-group-item d-flex justify-content-between align-items-center">
                                 {{ level }}
                                 <span class="badge badge-danger badge-pill"> {{ count }} </span>
                           </a>
