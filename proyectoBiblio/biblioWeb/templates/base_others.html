@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  {% include 'head.html' %}
+  {% load bootstrap4 %}
+  {% bootstrap_css %}
+
+  <body>
+
+      {% include 'header_others.html' %}
+      {% block content %}
+
+      {% endblock %}
+      {% include 'footer.html' %}
+
+      {% bootstrap_javascript jquery='full' %}
+  </body>
+</html>

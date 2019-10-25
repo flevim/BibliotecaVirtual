@@ -19,13 +19,23 @@ def library(request):
 
 
 def detail_course(request, level):
+
     def getLevels():
         return [level[1] for level in courses]
 
+    def getActualLevel(level):
+        for l in courses:
+            if l[1] == level: return l[0]
 
     try:
-        docs = Document.objects.filter(
+        paute_docs = Document.objects.filter(
+            level__exact = getActualLevel(level),
             is_guide_document = True,
+        )
+
+        educative_docs = Document.objects.filter(
+            level__exact = getActualLevel(level),
+            is_guide_document = False,
         )
 
     except:
@@ -33,7 +43,8 @@ def detail_course(request, level):
 
     context = {
         'levels': getLevels(),
-        'level_actual':level,
-        'docs': docs,
+        'actual_level':level,
+        'paute_docs': paute_docs,
+        'educative_docs': educative_docs,
     }
     return render(request, 'detail_course.html', context)

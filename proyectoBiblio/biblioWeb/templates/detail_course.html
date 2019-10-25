@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base_others.html' %}
 
 {% block content %}
 
@@ -6,7 +6,7 @@
         <div class="col-md-2">
           <ul class="list-group ml-4">
               {% for level in levels %}
-                  {% if level_actual == level %}
+                  {% if actual_level == level %}
                       <a href="/{{ level }}/" class="list-group-item list-group-item-action active">
                             {{ level }}
                       </a>
@@ -35,11 +35,11 @@
               <div class="col">
                 <div class="collapse multi-collapse" id="collapseExample1">
                   <div class="card card-body">
-                      {% if not docs %}
+                      {% if not paute_docs %}
                            <p class="font-italic">No se encuentran archivos temporalmente.</p>
                       {% endif %}
 
-                      {% for doc in docs %}
+                      {% for doc in paute_docs %}
                           <a href="#"> {{ doc }} </a>
                       {% endfor %}
 
@@ -49,7 +49,14 @@
               <div class="col">
                 <div class="collapse multi-collapse" id="collapseExample2">
                   <div class="card card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                      {% if not educative_docs %}
+                          <p class="font-italic">No se encuentran archivos temporalmente.</p>
+                      {% endif  %}
+
+                      {% for doc in educative_docs %}
+                          <a href="#"> {{ doc }} </a>
+                      {% endfor %}
+
                   </div>
                 </div>
               </div>
