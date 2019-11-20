@@ -2,7 +2,16 @@ from django.shortcuts import render
 from base.models import *
 
 def index(request):
-    return render(request, 'index.html', {})
+    news = News.objects.filter(
+        is_public = True,
+        relevant = True,
+
+    ).order_by('publication_date')[:3]
+
+    context = {
+        'news':news,
+    }
+    return render(request, 'index.html', context)
 
 
 def library(request):
@@ -48,3 +57,4 @@ def detail_course(request, level):
         'educative_docs': educative_docs,
     }
     return render(request, 'detail_course.html', context)
+

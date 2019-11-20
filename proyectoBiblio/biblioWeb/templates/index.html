@@ -1,4 +1,4 @@
-{% extends 'base_index.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
 
@@ -47,7 +47,7 @@
 </div>
 <!-- Contenido -->
 <div class="row">
-  <div class="col-md-9">
+  <div class="col-md-8">
     <section id="nosotros">
       <div class="container">
         <div class="row">
@@ -80,37 +80,23 @@
   </section>
 
   </div>
-  <div class="col-md-3">
+  <div class="col-md-4">
       <section class="align-items-center">
         <h2>Noticias de Interés</h2>
         <hr>
         <br>
-        <div class="card" style="width: 10rem;">
-            <img src="" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#">Go somewhere</a>
+        {% for new in news %}
+            <div class="card mb-3" style="width: 20rem;">
+                <img src="{{ new.reference_image.url }}" class="card-img-top" alt="..." height="200">
+                <div class="card-body">
+                  <h5 class="card-title">{{ new.title }}</h5>
+                  <p class="card-text">{{ new.description }}</p>
+                  <a href="#">Ver más</a>
+                </div>
             </div>
-        </div>
-        <br>
-        <div class="card" style="width: 10rem;">
-            <img src="" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#">Go somewhere</a>
-            </div>
-        </div>
-        <br>
-        <div class="card" style="width: 10rem;">
-            <img src="" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#">Go somewhere</a>
-            </div>
-        </div>
+            <br>
+        {% endfor %}
+        
 
 
 
