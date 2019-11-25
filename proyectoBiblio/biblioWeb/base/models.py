@@ -61,6 +61,7 @@ class Author(BaseModel):
 class Document(BaseModel):
     title = models.CharField('Titulo', max_length = 200)
     file = models.FileField(upload_to = 'documents/', max_length = 255)
+    reference_image = models.ImageField('Imagen referencial', upload_to = 'documentPicture/', null = True, blank = True)
     author = models.ForeignKey(Author, on_delete = models.CASCADE)
     level = models.CharField(choices = courses, max_length = 13)
     description = models.TextField('Descripción', null = True, blank = True)

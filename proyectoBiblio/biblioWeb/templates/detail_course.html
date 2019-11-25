@@ -45,7 +45,7 @@
                       {% endif %}
 
                       {% for doc in paute_docs %}
-                          <a href="#"> {{ doc }} </a>
+                          <a href="/{{ actual_level }}/{{ doc.title }}"> {{ doc.title }} </a>
                       {% endfor %}
 
                   </div>
@@ -59,7 +59,7 @@
                       {% endif  %}
 
                       {% for doc in educative_docs %}
-                          <a href="#"> {{ doc }} </a>
+                          <a href="/{{ actual_level }}/{{ doc.title }}"> {{ doc.title }} </a>
                       {% endfor %}
 
                   </div>

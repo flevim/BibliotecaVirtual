@@ -1,6 +1,6 @@
 from django.urls import path, re_path
 from django.contrib import admin
-from .views import index, library, detail_course
+from .views import index, library, detail_course, detail_document
 from django.conf import settings
 from django.views.static import serve
 
@@ -9,7 +9,8 @@ urlpatterns = [
     path('', index, name = 'index'),
     path('biblioteca/', library, name = 'biblioteca'),
     path('<level>/', detail_course, name = 'detalles_curso'),
-    ]
+    path('<level>/<doc>', detail_document, name = 'detalles_documento')
+]
 
 if settings.DEBUG:
     urlpatterns += [

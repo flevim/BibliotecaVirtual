@@ -58,3 +58,9 @@ def detail_course(request, level):
     }
     return render(request, 'detail_course.html', context)
 
+
+def detail_document(request,level, doc):
+    context = {
+        'actual_doc':doc
+    }
+    return render(request, 'detail_document.html', context)
