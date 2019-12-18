@@ -59,8 +59,14 @@ def detail_course(request, level):
     return render(request, 'detail_course.html', context)
 
 
-def detail_document(request,level, doc):
+def detail_document(request, level, doc):
+    info_doc = Document.objects.filter(title__exact=doc)
+    print(info_doc)
+    print(info_doc.description)
     context = {
-        'actual_doc':doc
+        'actual_doc':doc,
+        'doc_title':doc.title,
+        
+        'actual_level':level,
     }
     return render(request, 'detail_document.html', context)
