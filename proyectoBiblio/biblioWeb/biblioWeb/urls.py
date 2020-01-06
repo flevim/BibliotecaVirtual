@@ -1,6 +1,6 @@
 from django.urls import path, re_path
 from django.contrib import admin
-from .views import index, library, detail_course, detail_document
+from .views import index, library, detail_course, detail_document, contact
 from django.conf import settings
 from django.views.static import serve
 
@@ -8,6 +8,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name = 'index'),
     path('biblioteca/', library, name = 'biblioteca'),
+    path('contact/', contact, name = 'contacto'),
     path('<level>/', detail_course, name = 'detalles_curso'),
     path('<level>/<doc>', detail_document, name = 'detalles_documento')
 ]

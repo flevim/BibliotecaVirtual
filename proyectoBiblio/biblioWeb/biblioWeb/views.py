@@ -70,3 +70,6 @@ def detail_document(request, level, doc):
         'actual_level':level,
     }
     return render(request, 'detail_document.html', context)
+
+def contact(request):
+    return render(request, 'contact.html', {})

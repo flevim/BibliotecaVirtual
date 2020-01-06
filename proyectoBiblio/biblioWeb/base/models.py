@@ -86,7 +86,8 @@ class News(BaseModel):
     publication_date = models.DateField('Fecha de publicación')
     is_public = models.BooleanField('Publicado / No Publicado', default = False)
     relevant = models.BooleanField('Relevante / No relevante', default = False)
-
+    reference_url = models.URLField('URL', max_length=300)
+    
     class Meta:
         verbose_name = 'Noticia'
         verbose_name_plural = 'Noticias'
