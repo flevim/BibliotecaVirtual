@@ -73,3 +73,7 @@ def detail_document(request, level, doc):
 
 def contact(request):
     return render(request, 'contact.html', {})
+
+
+def gallery(request):
+    return render(request, 'gallery.html', {})
